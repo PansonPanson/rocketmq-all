@@ -11,6 +11,7 @@
 
 
 ## RocketMQ 博文合集
++ [基于 RocketMQ 的 MQTT 服务架构在小米的实践](https://mp.weixin.qq.com/s/gOVg0XGzPpTnkCRXWvknPw)
 + [大规模 ActiveMQ 平滑迁移 RocketMQ 的挑战与落地](https://mp.weixin.qq.com/s/fIseF4yJY0PSY_DtAw6qFg)
 + [光大银行基于 RocketMQ 的分布式消息平台建设实践](https://mp.weixin.qq.com/s/zDt3OpVgM0hyTjFOI6_FVA)
 + [Apache RocketMQ 在阿里云大规模商业化实践之路](https://mp.weixin.qq.com/s/bcjTyNcgPIeMlgNwdKyROg)
