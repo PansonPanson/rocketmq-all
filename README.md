@@ -11,6 +11,7 @@
 
 
 ## RocketMQ 博文合集
++ [让数据流动起来，RocketMQ Connect 技术架构解析](https://mp.weixin.qq.com/s/7IdwROHqOQDQexngaIDd-A)
 + [基于 RocketMQ 的 MQTT 服务架构在小米的实践](https://mp.weixin.qq.com/s/gOVg0XGzPpTnkCRXWvknPw)
 + [大规模 ActiveMQ 平滑迁移 RocketMQ 的挑战与落地](https://mp.weixin.qq.com/s/fIseF4yJY0PSY_DtAw6qFg)
 + [光大银行基于 RocketMQ 的分布式消息平台建设实践](https://mp.weixin.qq.com/s/zDt3OpVgM0hyTjFOI6_FVA)
