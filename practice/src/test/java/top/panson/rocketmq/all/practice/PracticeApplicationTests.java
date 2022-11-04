@@ -1,4 +1,4 @@
-package com.rocketmq.all.practice;
+package top.panson.rocketmq.all.practice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

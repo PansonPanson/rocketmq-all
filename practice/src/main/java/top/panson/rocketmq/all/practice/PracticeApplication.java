@@ -1,4 +1,4 @@
-package com.rocketmq.all.practice;
+package top.panson.rocketmq.all.practice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
