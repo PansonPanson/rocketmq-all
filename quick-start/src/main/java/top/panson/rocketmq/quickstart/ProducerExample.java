@@ -2,16 +2,10 @@ package top.panson.rocketmq.quickstart;
 
 
 import org.apache.rocketmq.client.apis.*;
-import org.apache.rocketmq.client.apis.consumer.ConsumeResult;
-import org.apache.rocketmq.client.apis.consumer.MessageListener;
-import org.apache.rocketmq.client.apis.consumer.SimpleConsumer;
 import org.apache.rocketmq.client.apis.message.Message;
-import org.apache.rocketmq.client.apis.message.MessageBuilder;
-import org.apache.rocketmq.client.apis.message.MessageView;
 import org.apache.rocketmq.client.apis.producer.Producer;
 import org.apache.rocketmq.client.apis.producer.SendReceipt;
-import java.time.Duration;
-import java.util.List;
+
 
 /**
  * @create 2022-11-03 20:04
