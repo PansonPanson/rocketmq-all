@@ -62,12 +62,12 @@ public class SimpleMessageProducer {
     }
 
     public SendResult batchSyncSend(Collection<Integer> ids) {
-        // 创建多条 Demo02Message 消息
-        List<Message> messages = new ArrayList<>(ids.size());
+        List<Message<SimpleMessage>> messages = new ArrayList<>(ids.size());
         for (Integer id : ids) {
             SimpleMessage simpleMessage = new SimpleMessage(id);
             // 构建 Spring Messaging 定义的 Message 消息
-            messages.add(MessageBuilder.withPayload(simpleMessage).build());
+            Message<SimpleMessage> message = MessageBuilder.withPayload(simpleMessage).build();
+            messages.add(message);
         }
         // 同步批量发送消息
         return rocketMQTemplate.syncSend(SimpleMessage.TOPIC, messages, 30 * 1000L);
