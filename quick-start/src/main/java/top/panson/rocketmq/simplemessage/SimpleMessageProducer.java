@@ -4,7 +4,13 @@ import org.apache.rocketmq.client.producer.SendCallback;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.Message;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 /**
  * @create 2022-11-29 15:40
@@ -53,6 +59,18 @@ public class SimpleMessageProducer {
         SimpleMessage message = new SimpleMessage();
         message.setId(id);
         rocketMQTemplate.sendOneWay(SimpleMessage.TOPIC, message);
+    }
+
+    public SendResult batchSyncSend(Collection<Integer> ids) {
+        // 创建多条 Demo02Message 消息
+        List<Message> messages = new ArrayList<>(ids.size());
+        for (Integer id : ids) {
+            SimpleMessage simpleMessage = new SimpleMessage(id);
+            // 构建 Spring Messaging 定义的 Message 消息
+            messages.add(MessageBuilder.withPayload(simpleMessage).build());
+        }
+        // 同步批量发送消息
+        return rocketMQTemplate.syncSend(SimpleMessage.TOPIC, messages, 30 * 1000L);
     }
 
 }

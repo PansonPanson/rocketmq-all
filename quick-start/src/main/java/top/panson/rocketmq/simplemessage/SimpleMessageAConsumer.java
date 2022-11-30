@@ -1,5 +1,6 @@
 package top.panson.rocketmq.simplemessage;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.slf4j.Logger;
@@ -22,6 +23,6 @@ public class SimpleMessageAConsumer implements RocketMQListener<SimpleMessage> {
 
     @Override
     public void onMessage(SimpleMessage simpleMessage) {
-        logger.info("[SimpleMessageAConsumer-onMessage][线程编号:{} 消息内容:{}]", Thread.currentThread().getId(), simpleMessage);
+        logger.info("[SimpleMessageAConsumer-onMessage][线程编号:{} 消息内容:{}]", Thread.currentThread().getId(), JSON.toJSONString(simpleMessage));
     }
 }

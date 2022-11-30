@@ -6,18 +6,19 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import top.panson.rocketmq.Application;
 import top.panson.rocketmq.simplemessage.SimpleMessageProducer;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class)
-public class Demo01ProducerTest {
+public class SimpleMessageProducerTest {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
@@ -61,6 +62,16 @@ public class Demo01ProducerTest {
         int id = (int) (System.currentTimeMillis() / 1000);
         producer.onewaySend(id);
         logger.info("[testOnewaySend][发送编号：[{}] 发送完成]", id);
+
+        // 阻塞等待，保证消费
+        new CountDownLatch(1).await();
+    }
+
+    @Test
+    public void testSendBatch() throws InterruptedException {
+        List<Integer> ids = Arrays.asList(1, 2, 3);
+        SendResult result = producer.batchSyncSend(ids);
+        logger.info("[testSendBatch][发送编号：[{}] 发送结果：[{}]]", ids, result);
 
         // 阻塞等待，保证消费
         new CountDownLatch(1).await();
