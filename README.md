@@ -15,7 +15,7 @@
 
 ## RocketMQ 博文合集
 
-### 1 —— 50 
+### 1 ~ 50 
 1. [RocketMQ 5.0 如何配置TLS加密传输？](https://mp.weixin.qq.com/s/8WUkoXPObNoCoKFN1yL66g)
 2. [RocketMQ 在小米的多场景灾备实践案例](https://mp.weixin.qq.com/s/X_ysJQUBKoBkTSrWYeLMZQ)
 3. [RocketMQ x OpenTelemetry 分布式全链路追踪最佳实践](https://mp.weixin.qq.com/s/uQXx71ordJG1tgctXoOiuQ)
@@ -67,7 +67,7 @@
 49. [RocketMQ OpenMLDB Connector，实时数据到特征工程的高速传输](https://mp.weixin.qq.com/s/GQTd6hOzEPysBmAEfsCDmQ)
 50. [RocketMQ社区在讨论什么？—— RIP-30《Support Compaction topic》Design Share](https://mp.weixin.qq.com/s/4TLHUxa_jJXRc4gehMjkVw)
 
-### 51 —— 100
+### 51 ~ 100
 
 51. [RocketMQ 5.0: 存储计算分离新思路](https://mp.weixin.qq.com/s/qgoCsLDs6_WtR4t4fdtEmA)
 52. [社区投稿｜RocketMQ的索引是怎么玩的？](https://mp.weixin.qq.com/s/LFL6Y8i-LH0X8z2olIdwxw)
