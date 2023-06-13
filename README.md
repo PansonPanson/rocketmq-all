@@ -93,3 +93,4 @@
 72. [从 RocketMQ 社区的一个ISSUE 谈 JDK8 的bug](https://mp.weixin.qq.com/s/wNSB_fMno9WPqRAWenquHw)
 73. [RocketMQ Streams--将轻量级实时计算引擎融合进消息系统](https://mp.weixin.qq.com/s/Aa3EI69Vckc5OiagdHalXg)
 74. [业务高速增长，如祺出行如何用腾讯云消息队列 RocketMQ 应对挑战](https://mp.weixin.qq.com/s/_LNfMMwwiqCwewCg21FCGw)
+75. [RocketMQ 多级存储设计与实现](https://mp.weixin.qq.com/s/8TGr_iCnBzAtVu0qz82D7Q)
